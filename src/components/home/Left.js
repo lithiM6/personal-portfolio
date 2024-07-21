@@ -2,8 +2,7 @@ import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { BsCloudLightningFill, BsFacebook } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FiFileText } from "react-icons/fi";
-import { FiInstagram, FiMail, FiSend } from "react-icons/fi";
+import { FiFileText, FiInstagram, FiMail } from "react-icons/fi";
 import { bannerImg } from "../../assets/index";
 
 const Left = () => {
@@ -14,11 +13,12 @@ const Left = () => {
     deleteSpeed: 20,
     delaySpeed: 2000,
   });
+
   return (
     <div
-  className="w-full lgl:w-5/12 h-full bg-bodyColor rounded-2xl shadow-testShwdow z-60"
-  style={{ marginTop: '33px' }} // Adjust the value as needed
->
+      className="w-full lgl:w-5/12 h-full bg-bodyColor rounded-2xl shadow-testShwdow z-60"
+      style={{ marginTop: '33px' }} // Adjust the value as needed
+    >
       <div className="w-full h-3/5">
         <img
           className="w-full h-full object-cover rounded-2xl"
@@ -37,29 +37,32 @@ const Left = () => {
           <div className="flex justify-center gap-2 mt-2">
             <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
               <a href="https://github.com/CheliM7" target="_blank" rel="noopener noreferrer">
-              <FaGithub />
+                <FaGithub />
               </a>
             </span>
             <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
-            <a href="https://www.linkedin.com/in/chemini-mallikarachchi/" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin />
-            </a>
+              <a href="https://www.linkedin.com/in/chemini-mallikarachchi/" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin />
+              </a>
             </span>
             <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
-            <a href="https://www.instagram.com/cheminii_/" target="_blank" rel="noopener noreferrer">
-            <FiInstagram />
-            </a>
+              <a href="https://www.instagram.com/cheminii_/" target="_blank" rel="noopener noreferrer">
+                <FiInstagram />
+              </a>
             </span>
             <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chemini.21@mrt.ac.lk&su=Subject&body=Body" target="_blank" rel="noopener noreferrer">
-            <FiMail />
-            </a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chemini.21@mrt.ac.lk&su=Subject&body=Body" target="_blank" rel="noopener noreferrer">
+                <FiMail />
+              </a>
             </span>
-            <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
-            <a href="https://drive.google.com/drive/folders/1b5DBZDGiVXrBQVVWymBSRnNb8VD-de7_?usp=sharing" target="_blank" rel="noopener noreferrer">
-            <FiFileText />
-            </a>
-            </span>
+            <div className="tooltip">
+              <span className="hover:text-designColor duration-300 cursor-pointer text-xl">
+                <a href="https://drive.google.com/drive/folders/1b5DBZDGiVXrBQVVWymBSRnNb8VD-de7_?usp=sharing" target="_blank" rel="noopener noreferrer">
+                  <FiFileText />
+                </a>
+              </span>
+              <span className="tooltip-text">Download CV</span>
+            </div>
           </div>
         </div>
       </div>
