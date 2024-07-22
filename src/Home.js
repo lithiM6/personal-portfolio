@@ -80,7 +80,7 @@ const Home = () => {
       </div>
       {/* ================= Top Nav Bar End here ======================== */}
 
-      <div className="w-full h-full flex flex-col lgl:flex-row items-center gap-6">
+      <div className="w-full h-full flex flex-col lgl:flex-row items-center gap-6 pb-10">
         {/* ======================== Home Left Start here ============================ */}
         <Left />
         {/* ======================== Home Left End here ============================== */}
