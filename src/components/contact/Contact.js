@@ -1,24 +1,25 @@
 import React, { useState } from "react";
-import axios from "axios";
+import emailjs from "emailjs-com";
 import { FiSend } from "react-icons/fi";
 import Title from "../home/Title";
 
 const Contact = () => {
   const [clientName, setClientName] = useState("");
   const [email, setEmail] = useState("");
-  const [messages, setMessages] = useState("");
+  const [message, setMessage] = useState("");
 
   // ================= Error Messages Start here =================
   const [errClientName, setErrClientName] = useState(false);
   const [errEmail, setErrEmail] = useState(false);
-  const [errMessages, setErrMessage] = useState(false);
+  const [errMessage, setErrMessage] = useState(false);
   // ================= Error Messages End here ===================
-  const [seuccessMsg, setSuccessMsg] = useState("");
+  const [successMsg, setSuccessMsg] = useState("");
+
   // ================= Email Validation Start here ===============
   const EmailValidation = (email) => {
     return String(email)
       .toLowerCase()
-      .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
+      .match(/^\w+([-]?\w+)@\w+([-]?\w+)(\.\w{2,3})+$/);
   };
   // ================= Email Validation End here =================
 
@@ -30,8 +31,8 @@ const Contact = () => {
     setEmail(e.target.value);
     setErrEmail(false);
   };
-  const handleMessages = (e) => {
-    setMessages(e.target.value);
+  const handleMessage = (e) => {
+    setMessage(e.target.value);
     setErrMessage(false);
   };
 
@@ -47,39 +48,49 @@ const Contact = () => {
         setErrEmail(true);
       }
     }
-    if (!messages) {
+    if (!message) {
       setErrMessage(true);
     }
-    if (clientName && email && EmailValidation(email) && messages) {
-      axios.post("https://getform.io/f/e18ee560-5133-4cfe-9a48-eddb6f012a9f", {
-        name: clientName,
-        email: email,
-        message: messages,
-      });
-      setSuccessMsg(
-        `Hello ${clientName}, Your messages has been sent successfully. Thank you for your time!`
-      );
-      setClientName("");
-      setEmail("");
-      setMessages("");
+    if (clientName && email && EmailValidation(email) && message) {
+      emailjs
+        .send(
+          'service_ivtl7vf', // Replace with your EmailJS service ID
+          'template_zrk5v6t', // Replace with your EmailJS template ID
+          {
+            from_name: clientName,
+            from_email: email,
+            message: message,
+          },
+          'TitJSrbVTNDN7W7R9' // Replace with your EmailJS user ID
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            setSuccessMsg(
+              `Hello  ${clientName}, Your message has been sent successfully. Thank you for your time!`
+            );
+            setClientName("");
+            setEmail("");
+            setMessage("");
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
     }
   };
+
   return (
     <div className="w-full">
-      {/* <Title title="Get" subTitle="in Touch" /> */}
-      <div className="p-6 w-full flex flex-col md:flex-row justify-between gap-4 md:gap-10 lgl:gap-20">
-      </div>
       <div className="w-full mt-10">
         <Title title="Send" subTitle="Messages" />
-        {seuccessMsg ? (
+        {successMsg ? (
           <p className="text-center text-base font-titleFont p-20 text-designColor">
-            {seuccessMsg}
+            {successMsg}
           </p>
         ) : (
           <form
             id="form"
-            action="https://getform.io/f/e18ee560-5133-4cfe-9a48-eddb6f012a9f"
-            method="POST"
             className="p-6 flex flex-col gap-6"
           >
             <div className="w-full flex flex-col lgl:flex-row gap-4 lgl:gap-10 justify-between">
@@ -91,7 +102,6 @@ const Contact = () => {
                     ? "border-red-600 focus-visible:border-red-600"
                     : "border-zinc-600 focus-visible:border-designColor"
                 } w-full bg-transparent border-2 px-4 py-2 text-base text-gray-200 outline-none duration-300`}
-                // className="w-full bg-transparent border-2 px-4 py-2 text-base text-gray-200 border-zinc-600 focus-visible:border-designColor outline-none duration-300"
                 type="text"
                 placeholder="Full Name"
               />
@@ -108,10 +118,10 @@ const Contact = () => {
               />
             </div>
             <textarea
-              onChange={handleMessages}
-              value={messages}
+              onChange={handleMessage}
+              value={message}
               className={`${
-                errMessages
+                errMessage
                   ? "border-red-600 focus-visible:border-red-600"
                   : "border-zinc-600 focus-visible:border-designColor"
               } w-full bg-transparent border-2 px-4 py-2 text-base text-gray-200 outline-none duration-300 resize-none`}
