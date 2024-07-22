@@ -1,6 +1,5 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { BsCloudLightningFill, BsFacebook } from "react-icons/bs";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FiFileText, FiInstagram, FiMail } from "react-icons/fi";
 import { bannerImg } from "../../assets/index";

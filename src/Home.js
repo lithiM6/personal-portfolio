@@ -14,14 +14,12 @@ const Home = () => {
   const [about, setAbout] = useState(true);
   const [resume, setResume] = useState(false);
   const [projects, setProjects] = useState(false);
-  const [blog, setBlog] = useState(false);
   const [contact, setContact] = useState(false);
 
   const handleNavigationClick = (section) => {
     setAbout(section === "about");
     setResume(section === "resume");
     setProjects(section === "projects");
-    setBlog(section === "blog");
     setContact(section === "contact");
   };
 
