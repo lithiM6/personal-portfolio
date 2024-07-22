@@ -2,8 +2,6 @@ import React from "react";
 import { SiArtstation } from "react-icons/si";
 import { FaFlag } from "react-icons/fa";
 import { BiCodeAlt } from "react-icons/bi";
-import { IoIosPaper } from "react-icons/io";
-import { GiCheckMark } from "react-icons/gi";
 import ResumeTitle from "./ResumeTitle";
 
 const Skills = () => {
