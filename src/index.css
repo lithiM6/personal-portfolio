@@ -104,3 +104,18 @@
   visibility: visible;
   opacity: 1;
 }
+
+.popup {
+  /* Your popup styling */
+}
+
+.technologies {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tech-icon {
+  font-size: 24px;
+  color: #333; /* Adjust as needed */
+}
