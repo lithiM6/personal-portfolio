@@ -90,7 +90,7 @@ const Home = () => {
             <Projects />
             <Contact />
           </div>
-          {/* ======================== Smaller device content End ========================== */}
+          {/* ======================== Responsiveness for smaller devices ========================== */}
           <div className="w-full h-[96%] hidden lgl:flex justify-center overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]">
             {about && (
               <motion.div
