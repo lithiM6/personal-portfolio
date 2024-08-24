@@ -65,6 +65,14 @@ const Education = () => {
             "A part of the core committee that organized APS 2023, an international conference for the Asia-Pacific region, with a delegation of 100+ participants, hosted by AIESEC in Sri Lanka."
           ]}
         />
+        <ResumeCard
+          badge="2023 July"
+          title="Co-chair | Speech Olympiad XVI"
+          subTitle="Gavel Club of Unversity of Moratuwa"
+          descriptions={[
+            "An intra university speech competition with the participation of over 100+ undergraduates, spanning over a period of four months."
+            ]}
+        />
       </div>
     </div>
   );
