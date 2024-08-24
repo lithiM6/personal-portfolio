@@ -108,7 +108,7 @@ const projectData = [
     title: "Flower Exchange Trader Application", 
     category: "Application", 
     image: ImgOne, 
-    details: "Implemented a high-performance trading system in C++ for a flower exchange. A python frontend included.",
+    details: "Implemented a high-performance trading system in C++ for a flower exchange. A minimalistic frontend included.",
     technologies: ["C++", "Python"],
     repoLink: "https://github.com/SaviNimz/Flower-exchange-Trader-application" 
   }, 
