@@ -20,7 +20,7 @@ const Skills = () => {
           </div>
           {/* web Development */}
           <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">ReactJs</p>
+            <p className="text-base text-textColor -mb-1.5">JavaScript</p>
             <span className="w-full bg-zinc-600 h-1 inline-flex relative">
               <span className="w-[90%] h-full absolute top-0 left-0 bg-designColor"></span>
             </span>
@@ -28,7 +28,7 @@ const Skills = () => {
           {/* Mobile Application */}
           <div className="py-3 border-b-[1px] border-zinc-800">
             <p className="text-base text-textColor -mb-1.5">
-            JavaScript
+            C++
             </p>
             <span className="w-full bg-zinc-600 h-1 inline-flex relative">
               <span className="w-[85%] h-full absolute top-0 left-0 bg-designColor"></span>
@@ -36,7 +36,7 @@ const Skills = () => {
           </div>
           {/* UI Design */}
           <div className="py-3 border-b-[1px] border-zinc-800">
-            <p className="text-base text-textColor -mb-1.5">C++</p>
+            <p className="text-base text-textColor -mb-1.5">SQL</p>
             <span className="w-full bg-zinc-600 h-1 inline-flex relative">
               <span className="w-[65%] h-full absolute top-0 left-0 bg-designColor"></span>
             </span>
