@@ -6,7 +6,7 @@ Welcome to my personal portfolio website, created as a submission for the FestX 
 
 ## Technologies and Tools
 
-- **React**: For building the user interface.
+- **React**: For building the frontend.
 - **Tailwind CSS**: For utility-first CSS styling.
 
 ## Getting Started
@@ -17,7 +17,7 @@ In the project directory, you can run the following commands:
 
 Runs the app in development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.\
-The page will reload when you make changes.
+The page will reload whenever you make changes.
 
 ### `npm test`
 
