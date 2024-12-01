@@ -11,35 +11,36 @@ import ProjectsCard from "./ProjectsCard";
 
 const projectData = [
   {
-    title: "SriFlix Website",
-    category: "Website",
+    title: "Printing Services",
+    category: "",
     image: workImgThree,
     // details: 'Built a full stack website similar to Netflix. Users can sign up and log in to personalized accounts to browse and manage a real-time collection of movies and TV shows, including a watch list feature.',
     // technologies: ["React", "Node", "MongoDB", "Firebase"],
     // repoLink: "https://github.com/SaviNimz/SriFlix" 
   },
     { 
-    title: "Flower Exchange Trader Application", 
-    category: "Application", 
+    title: "Brochures and Flyers", 
+    category: "", 
     image: ImgOne, 
     // details: "Implemented a high-performance trading system in C++ for a flower exchange. A minimalistic frontend included.",
     // technologies: ["C++", "Python"],
     // repoLink: "https://github.com/SaviNimz/Flower-exchange-Trader-application" 
   }, 
-    { 
-    title: "RPAL Interpreter", 
-    category: "Interpreter", 
+
+  { 
+    title: "Food Boxes", 
+    category: "", 
+    image: workImgFive, 
+    // details: `The Weather Guide web application is machine-learning related application designed to deliver real-time, location-specific weather forecasts tailored for tourists and general users.`,
+    // technologies: ["Python", "React", "MongoDB","TensorFlow"],
+  },
+  { 
+    title: "Business Cards", 
+    category: "", 
     image: workImgTwo, 
     // details: "Implemented a fully functional interpreter for the RPAL programming language using written using Python.",
     // technologies: ["Python"],
     // repoLink: "https://github.com/SaviNimz/RPAL-interpreter"
-  },
-  { 
-    title: "WeatherGuide", 
-    category: "Website", 
-    image: workImgFive, 
-    // details: `The Weather Guide web application is machine-learning related application designed to deliver real-time, location-specific weather forecasts tailored for tourists and general users.`,
-    // technologies: ["Python", "React", "MongoDB","TensorFlow"],
   },
 ];
 
@@ -56,7 +57,7 @@ const Projects = () => {
 
   return (
     <div className="relative">
-      <Title title="Recent" subTitle="Projects" />
+      <Title title="Services" subTitle="We Provide" />
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 lgl:gap-10">
         {projectData.map((project, index) => (
           <div key={index} className="px-6">
