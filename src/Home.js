@@ -6,21 +6,20 @@ import { IoIosPaper } from "react-icons/io";
 import { MdWork } from "react-icons/md";
 import Left from "./components/home/Left";
 import About from "./components/about/About";
-import Resume from "./components/resume/Resume";
+// import Resume from "./components/resume/Resume";
 import Projects from "./components/projects/Projects";
-import Contact from "./components/contact/Contact";
 
 const Home = () => {
   const [about, setAbout] = useState(true);
-  const [resume, setResume] = useState(false);
+  // const [resume, setResume] = useState(false);
   const [projects, setProjects] = useState(false);
-  const [contact, setContact] = useState(false);
+  // const [contact, setContact] = useState(false);
 
   const handleNavigationClick = (section) => {
     setAbout(section === "about");
-    setResume(section === "resume");
+    // setResume(section === "resume");
     setProjects(section === "projects");
-    setContact(section === "contact");
+    // setContact(section === "contact");
   };
 
   return (
@@ -39,7 +38,7 @@ const Home = () => {
           </span>
           <span className="text-sm mt-2">About</span>
         </div>
-        {/* Resume Icon */}
+        {/* Resume Icon
         <div className="flex flex-col items-center">
           <span
             onClick={() => handleNavigationClick("resume")}
@@ -50,7 +49,7 @@ const Home = () => {
             <IoIosPaper />
           </span>
           <span className="text-sm mt-2">Resume</span>
-        </div>
+        </div> */}
         {/* Project Icon */}
         <div className="flex flex-col items-center">
           <span
@@ -61,9 +60,9 @@ const Home = () => {
           >
             <MdWork />
           </span>
-          <span className="text-sm mt-2">Projects</span>
+          <span className="text-sm mt-2">Services</span>
         </div>
-        {/* Contact Icon */}
+        {/* Contact Icon
         <div className="flex flex-col items-center">
           <span
             onClick={() => handleNavigationClick("contact")}
@@ -74,7 +73,7 @@ const Home = () => {
             <FaEnvelope />
           </span>
           <span className="text-sm mt-2">Contact</span>
-        </div>
+        </div> */}
       </div>
       {/* ================= Top Nav Bar End here ======================== */}
 
@@ -86,9 +85,9 @@ const Home = () => {
           {/* ======================== Smaller device content Start ======================== */}
           <div className="w-full h-full lgl:hidden bg-transparent rounded-2xl flex flex-col gap-6">
             <About />
-            <Resume />
+            {/* <Resume /> */}
             <Projects />
-            <Contact />
+            {/* <Contact /> */}
           </div>
           {/* ======================== Responsiveness for smaller devices ========================== */}
           <div className="w-full h-[96%] hidden lgl:flex justify-center overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]">
@@ -102,7 +101,7 @@ const Home = () => {
               </motion.div>
             )}
 
-            {resume && (
+            {/* {resume && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -110,7 +109,7 @@ const Home = () => {
               >
                 <Resume />
               </motion.div>
-            )}
+            )} */}
             {projects && (
               <motion.div
                 initial={{ opacity: 0 }}
@@ -120,7 +119,7 @@ const Home = () => {
                 <Projects />
               </motion.div>
             )}
-            {contact && (
+            {/* {contact && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -128,7 +127,7 @@ const Home = () => {
               >
                 <Contact />
               </motion.div>
-            )}
+            )} */}
           </div>
         </div>
       </div>

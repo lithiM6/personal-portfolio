@@ -1,20 +1,9 @@
-import React, { useState } from "react";
-import ProjectPopup from "./ProjectPopup";
+import React from "react";
 
-const ProjectsCard = ({ image, title, category, details, technologies, repoLink }) => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-  const handleTileClick = () => {
-    setIsPopupOpen(true);
-  };
-
-  const handleClosePopup = () => {
-    setIsPopupOpen(false);
-  };
-
+const ProjectsCard = ({ image, title, category }) => {
   return (
     <div className="w-full py-8 flex flex-col justify-center items-center border-b-[1px] border-b-zinc-800">
-      <div className="w-full h-full mb-3 overflow-hidden relative cursor-pointer group" onClick={handleTileClick}>
+      <div className="w-full h-full mb-3 overflow-hidden relative cursor-pointer group">
         <img
           className="w-full h-full object-cover scale-100 group-hover:scale-110 duration-300 cursor-pointer"
           src={image}
@@ -26,16 +15,6 @@ const ProjectsCard = ({ image, title, category, details, technologies, repoLink 
         {title}
       </h3>
       <p className="text-base text-gray-400 -mt-1">{category}</p>
-
-      {isPopupOpen && (
-        <ProjectPopup 
-          title={title}
-          details={details}
-          technologies={technologies}
-          repoLink={repoLink} 
-          onClose={handleClosePopup}
-        />
-      )}
     </div>
   );
 };
