@@ -1,7 +1,7 @@
 import React from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FiFileText, FiInstagram, FiMail } from "react-icons/fi";
+import {  FaLinkedin } from "react-icons/fa";
+import {  FiInstagram, FiMail } from "react-icons/fi";
 import { ransen } from "../../assets/index";
 
 const Left = () => {

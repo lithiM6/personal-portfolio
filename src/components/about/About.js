@@ -1,8 +1,6 @@
 import React from "react";
 import Title from "../home/Title";
 import AboutMe from "./AboutMe";
-import FunFact from "./FunFact";
-import MyServices from "./MyServices";
 import ContactDetails from "./ContactDetails";
 
 const About = () => {
