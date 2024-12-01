@@ -1,8 +1,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaUser, FaEnvelope } from "react-icons/fa";
-import { IoIosPaper } from "react-icons/io";
+import { FaUser } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import Left from "./components/home/Left";
 import About from "./components/about/About";
