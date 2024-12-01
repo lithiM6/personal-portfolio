@@ -1,96 +1,64 @@
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaUser } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import Left from "./components/home/Left";
 import About from "./components/about/About";
-// import Resume from "./components/resume/Resume";
 import Projects from "./components/projects/Projects";
 
 const Home = () => {
-  const [about, setAbout] = useState(true);
-  // const [resume, setResume] = useState(false);
-  const [projects, setProjects] = useState(false);
-  // const [contact, setContact] = useState(false);
+  const [activeSection, setActiveSection] = useState("about");
 
   const handleNavigationClick = (section) => {
-    setAbout(section === "about");
-    // setResume(section === "resume");
-    setProjects(section === "projects");
-    // setContact(section === "contact");
+    setActiveSection(section);
   };
 
   return (
     <div className="w-full h-full bg-transparent text-white z-50 flex flex-col items-start justify-between p-4">
-      {/* ================= Top Nav Bar Start here ======================== */}
+      {/* Top Navigation Bar */}
       <div className="w-0 h-16 bg-transparent flex items-center justify-center gap-16 p-2 lgl:flex hidden rounded-lg shadow-lg mx-auto">
-        {/* About Icon */}
+        {/* About Section */}
         <div className="flex flex-col items-center">
           <span
             onClick={() => handleNavigationClick("about")}
             className={`${
-              about ? "text-designColor" : "text-textColor"
-            } text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
+              activeSection === "about" ? "text-designColor" : "text-textColor"
+            } text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer`}
           >
             <FaUser />
           </span>
           <span className="text-sm mt-2">About</span>
         </div>
-        {/* Resume Icon
-        <div className="flex flex-col items-center">
-          <span
-            onClick={() => handleNavigationClick("resume")}
-            className={`${
-              resume ? "text-designColor" : "text-textColor"
-            } text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
-          >
-            <IoIosPaper />
-          </span>
-          <span className="text-sm mt-2">Resume</span>
-        </div> */}
-        {/* Project Icon */}
+
+        {/* Projects Section */}
         <div className="flex flex-col items-center">
           <span
             onClick={() => handleNavigationClick("projects")}
             className={`${
-              projects ? "text-designColor" : "text-textColor"
-            } text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
+              activeSection === "projects" ? "text-designColor" : "text-textColor"
+            } text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer`}
           >
             <MdWork />
           </span>
           <span className="text-sm mt-2">Services</span>
         </div>
-        {/* Contact Icon
-        <div className="flex flex-col items-center">
-          <span
-            onClick={() => handleNavigationClick("contact")}
-            className={`${
-              contact ? "text-designColor" : "text-textColor"
-            } text-xl flex items-center justify-center hover:text-designColor duration-300 cursor-pointer relative group`}
-          >
-            <FaEnvelope />
-          </span>
-          <span className="text-sm mt-2">Contact</span>
-        </div> */}
       </div>
-      {/* ================= Top Nav Bar End here ======================== */}
 
       <div className="w-full h-full flex flex-col lgl:flex-row items-center gap-6 pb-10">
-        {/* ======================== Home Left Start here ============================ */}
+        {/* Left Sidebar */}
         <Left />
-        {/* ======================== Home Left End here ============================== */}
+
+        {/* Main Content */}
         <div className="w-full lgl:w-8/12 h-[95%] bg-bodyColor rounded-2xl flex justify-center items-center">
-          {/* ======================== Smaller device content Start ======================== */}
+          {/* Smaller Devices */}
           <div className="w-full h-full lgl:hidden bg-transparent rounded-2xl flex flex-col gap-6">
-            <About />
-            {/* <Resume /> */}
-            <Projects />
-            {/* <Contact /> */}
+            {activeSection === "about" && <About />}
+            {activeSection === "projects" && <Projects />}
           </div>
-          {/* ======================== Responsiveness for smaller devices ========================== */}
+
+          {/* Larger Devices */}
           <div className="w-full h-[96%] hidden lgl:flex justify-center overflow-y-scroll scrollbar-thin scrollbar-thumb-[#646464]">
-            {about && (
+            {activeSection === "about" && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -99,17 +67,7 @@ const Home = () => {
                 <About />
               </motion.div>
             )}
-
-            {/* {resume && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <Resume />
-              </motion.div>
-            )} */}
-            {projects && (
+            {activeSection === "projects" && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -118,15 +76,6 @@ const Home = () => {
                 <Projects />
               </motion.div>
             )}
-            {/* {contact && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <Contact />
-              </motion.div>
-            )} */}
           </div>
         </div>
       </div>

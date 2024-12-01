@@ -3,18 +3,25 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const ContactDetails = () => {
   return (
-    <div className="space-y-4 text-center">
-      <h2 className="text-2xl font-bold"></h2>
-      <div className="flex items-center justify-center space-x-2">
-        <FaPhoneAlt />
-        <span>+94 766234285</span>
+    <div className="space-y-6 text-center">
+      {/* Section Heading */}
+      <h2 className="text-2xl font-bold text-designColor">Contact Us</h2>
+
+      {/* Phone Number */}
+      <div className="flex items-center justify-center space-x-3 text-lg">
+        <FaPhoneAlt className="text-designColor" />
+        <span>+94 766 234 285</span>
       </div>
-      <div className="flex items-center justify-center space-x-2">
-        <FaEnvelope />
+
+      {/* Email Address */}
+      <div className="flex items-center justify-center space-x-3 text-lg">
+        <FaEnvelope className="text-designColor" />
         <span>ransengraphics@gmail.com</span>
       </div>
-      <div className="flex items-center justify-center space-x-2">
-        <FaMapMarkerAlt />
+
+      {/* Address */}
+      <div className="flex items-center justify-center space-x-3 text-lg">
+        <FaMapMarkerAlt className="text-designColor" />
         <span>No. 444/10 B5, Delgahawatte Road, Ratmalana</span>
       </div>
     </div>
