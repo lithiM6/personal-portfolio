@@ -18,6 +18,7 @@ function App() {
         <RoundThree />
         <RoundFour />
         <RoundFive />
+        <RoundThree />
       </div>
     </div>
   );
