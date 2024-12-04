@@ -11,6 +11,7 @@ const ContactDetails = () => {
       <div className="flex items-center justify-center space-x-3 text-lg">
         <FaPhoneAlt className="text-designColor" />
         <span>+94 766 234 285</span>
+        <span>+94 715 911 361</span>
       </div>
 
       {/* Email Address */}
@@ -22,7 +23,7 @@ const ContactDetails = () => {
       {/* Address */}
       <div className="flex items-center justify-center space-x-3 text-lg">
         <FaMapMarkerAlt className="text-designColor" />
-        <span>No. 444/10 B5, Delgahawatte Road, Ratmalana</span>
+        <span>No.444/2/1 Galle Road, Ratmalana</span>
       </div>
     </div>
   );
