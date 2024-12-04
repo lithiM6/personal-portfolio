@@ -4,6 +4,9 @@ import {
   workImgTwo,
   workImgThree,
   workImgFive,
+  letterheads,
+  calendars,
+  traymats
 } from "../../assets";
 import Title from "../home/Title";
 import ProjectsCard from "./ProjectsCard";
@@ -14,17 +17,29 @@ const projectData = [
     image: workImgThree,
   },
   {
+    title: "Business Cards",
+    image: workImgTwo,
+  },
+  {
     title: "Brochures and Flyers",
     image: ImgOne,
   },
   {
-    title: "Food Boxes",
+    title: "Gift/Food Boxes",
     image: workImgFive,
   },
   {
-    title: "Business Cards",
-    image: workImgTwo,
+    title: "Calendars",
+    image: calendars,
   },
+  {
+    title: "Tray Mats",
+    image: traymats,
+  },
+  {
+    title: "Letterheads and Envelopes",
+    image: letterheads,
+  }
 ];
 
 const Projects = () => {
