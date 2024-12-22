@@ -23,7 +23,7 @@ const ContactDetails = () => {
       {/* Address */}
       <div className="flex items-center justify-center space-x-3 text-lg">
         <FaMapMarkerAlt className="text-designColor" />
-        <span>No.444/2/1 Galle Road, Ratmalana</span>
+        <span>No.444/2/1, Galle Road, Ratmalana</span>
       </div>
     </div>
   );
